@@ -1,0 +1,40 @@
+
+from Image import *
+
+# app starts from here
+if __name__ == "__main__":
+    ###run a script to pair the images and created spreadsheets
+
+    ###give images a random ID
+    #assignRandomID()
+    
+    ###save images info to hash map. because image pool will be huge, retrieve the images only when requested
+    #mappingImageNodes()
+
+    ### generated spreadsheet with the chosen pairing ways, and restore the generated sheets to disk
+    #generateSpreadSheet(PAIRING_METHOD)
+    #openImages("Test String")
+    #generateImages_CSV()
+    #onlineVerFromURL(100)
+    
+    ## use this to get all image files
+    #downloadFromURL()
+
+    # file_array = [
+    #     "exportedSelection_east.json",
+    #     "exportedSelection_west.json",
+    #     "exportedSelection_north.json",
+    #     "exportedSelection_south.json",
+    #     "exportedSelection_north_east.json",
+    #     "exportedSelection_north_west.json",
+    #     "exportedSelection_south_east.json",
+    #     "exportedSelection_south_west.json",
+    #     "exportedSelection_south_east_dense.json",
+    #     "exportedSelection_south_east_scater.json"       
+    # ]
+
+    
+    selectImages("./json/", "exportedSelection_east.csv", "exportedSelection_west.csv", 100)
+    
+
+
