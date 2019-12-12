@@ -248,66 +248,56 @@ def offlineVerFromURL():
 def selectImages(prefix, cate_1, cate_2, number):
     print("Sampling and generate ") 
     
+    webprefix = "https://rimichen.github.io/StreetScore/"
+
+    
     dict_1 = []
     dict_2 = []
     
-    # json_file_path_1 = prefix + cate_1
-    # json_file_path_2 = prefix + cate_2
-    # image_folder_path_1 = prefix + cate_1.replace(".json", "")+"/"
-    # image_folder_path_2 = prefix + cate_2.replace(".json", "")+"/"
+    json_file_path_1 = prefix + cate_1
+    json_file_path_2 = prefix + cate_2
+    image_folder_path_1 = prefix + cate_1.replace(".json", "")+"/"
+    image_folder_path_2 = prefix + cate_2.replace(".json", "")+"/"
     
-    # print(json_file_path_1)
-    # print(json_file_path_2)
-    # print(image_folder_path_1)
-    # print(image_folder_path_2)
+    print(json_file_path_1)
+    print(json_file_path_2)
+    print(image_folder_path_1)
+    print(image_folder_path_2)
     
-    
-    # with open(json_file_path_1) as json_file:
-    #         json_data = json.load(json_file)
-    #         # create a folder to save images
+    new_prefix = prefix.replace("./","")+cate_1.replace(".json", "")+"/"    
+    with open(json_file_path_1) as json_file:
+            json_data = json.load(json_file)
+            # create a folder to save images
             
             
-    #         for data in json_data:
-    #             image_format = data["image"].replace("..","").split("/")
-    #             image_address = image_folder_path_1 +image_format[-1]
-    #             print(image_address)
-    #             dict_1[data["id"]] = image_address
-    # json_file.close()        
+            for data in json_data:
+                image_format = data["image"].replace("..","").split("/")
+                image_address = image_folder_path_1 +image_format[-1]
+                #print(image_address)
+                web_image = webprefix+new_prefix+image_format[-1]
+                dict_1.append(web_image)
+                #print(web_image)
+    json_file.close()        
 
-    # with open(json_file_path_2) as json_file:
-    #         json_data = json.load(json_file)
-    #         # create a folder to save images
+    new_prefix = prefix.replace("./","")+cate_2.replace(".json", "")+"/"
+    with open(json_file_path_2) as json_file:
+            json_data = json.load(json_file)
+            # create a folder to save images
             
             
-    #         for data in json_data:
-    #             image_format = data["image"].replace("..","").split("/")
-    #             image_address = image_folder_path_2 +image_format[-1]
-    #             print(image_address)
-    #             dict_2[data["id"]] = image_address
-    # json_file.close()        
+            for data in json_data:
+                image_format = data["image"].replace("..","").split("/")
+                image_address = image_folder_path_2 +image_format[-1]
+                #print(image_address)
+                web_image = webprefix+new_prefix+image_format[-1]
+                dict_2.append(web_image)
+                #print(web_image)
+    json_file.close()        
     
- 
-    csv_path_1 = prefix + cate_1
-    csv_path_2 = prefix + cate_2
-    
-    with open(csv_path_1, newline='') as csvfile:
-        data = list(csv.reader(csvfile))
-
-    #print(data)
-    for link in data:
-        dict_1.append(getImageDirectLink(link[0]))    
-    
-
-    with open(csv_path_2, newline='') as csvfile:
-        data = list(csv.reader(csvfile))
-
-    #print(data)
-    for link in data:
-        dict_2.append(getImageDirectLink(link[0]))   
-
       
     csv_name = cate_1.replace(".csv", "")+"_"+cate_2.replace(".csv", "")+".csv"
     with open(csv_name, mode='w', newline='') as csv_file:
+        print("Creating file " + csv_name)
         fieldnames = ['image_url', 'image_url_2']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 

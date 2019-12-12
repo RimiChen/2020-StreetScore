@@ -20,21 +20,24 @@ if __name__ == "__main__":
     ## use this to get all image files
     #downloadFromURL()
 
-    # file_array = [
-    #     "exportedSelection_east.json",
-    #     "exportedSelection_west.json",
-    #     "exportedSelection_north.json",
-    #     "exportedSelection_south.json",
-    #     "exportedSelection_north_east.json",
-    #     "exportedSelection_north_west.json",
-    #     "exportedSelection_south_east.json",
-    #     "exportedSelection_south_west.json",
-    #     "exportedSelection_south_east_dense.json",
-    #     "exportedSelection_south_east_scater.json"       
-    # ]
+    file_array = [
+        "exportedSelection_east.json",
+        "exportedSelection_west.json",
+        "exportedSelection_north.json",
+        "exportedSelection_south.json",
+        "exportedSelection_north_east.json",
+        "exportedSelection_north_west.json",
+        "exportedSelection_south_east.json",
+        "exportedSelection_south_west.json",
+        "exportedSelection_south_east_dense.json",
+        "exportedSelection_south_east_loose.json"       
+    ]
 
     
-    selectImages("./json/", "exportedSelection_east.csv", "exportedSelection_west.csv", 100)
+    for index_1 in range(len(file_array)):
+        for index_2 in range(len(file_array)):
+            if not (index_1 == index_2):
+                selectImages("./json/", file_array[index_1], file_array[index_2], 200)
     
 
 
