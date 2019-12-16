@@ -11,6 +11,7 @@ import csv
 import json
 from collections import namedtuple
 from random import randrange
+from random import shuffle
 
 
 # class ImageNode(object):
@@ -244,6 +245,80 @@ def onlineVerFromURL(number_pairs):
     
 def offlineVerFromURL():
     print("from local file to get the key and values")
+
+def getImagePairs_Iter(file_1, file_2):
+    image_pairs = []
+    x_1 = len(file_1)
+    x_2 = len(file_2)
+    
+    #x_1 = 3
+    #x_2 = 3
+    for i in range(x_1):
+        for j in range(x_2):
+            if(i <= j):
+                new_pair = {"img1":file_1[i], "img2":file_2[j]}
+                #new_pair = {"img1":i, "img2":j}
+                image_pairs.append(new_pair)
+                
+    return image_pairs
+                
+
+def getSampledImages(prefix, fileName, number):
+    webprefix = "https://rimichen.github.io/StreetScore/"
+    dict_1 = []
+    image_samples = []
+    new_file_name =  prefix + fileName
+    new_prefix = prefix.replace("./","")+ fileName.replace(".json", "")+"/"  
+ 
+    with open(new_file_name) as json_file:
+            json_data = json.load(json_file)
+            # create a folder to save images
+            
+            for data in json_data:
+                image_format = data["image"].replace("..","").split("/")
+                image_address = fileName +image_format[-1]
+                #print(image_address)
+                web_image = webprefix+new_prefix+image_format[-1]
+                dict_1.append(web_image)
+                #print(web_image)
+    json_file.close() 
+    
+    
+    for index in range(number):
+        image_samples.append(random.choice(list(dict_1)))
+    
+    
+    return image_samples      
+    
+def finalizePairs(final, duplicate_number, filp_number):
+    #print(len(final))
+    #print(duplicate_number)
+    #print(filp_number)
+    new_pairs = []
+    
+    for i in range(duplicate_number):
+        target_pair = random.choice(final)
+        new_pair = target_pair
+        new_pairs.append(new_pair)
+        
+    #print(len(new_pairs))    
+    for j in range(filp_number):
+        target_pair = random.choice(final)
+        new_pair = {"img1": target_pair["img2"], "img2": target_pair["img1"]}
+        new_pairs.append(new_pair)
+        
+    
+    #print(len(new_pairs))
+    new_pairs.extend(final)
+    
+    return new_pairs
+    
+    
+def randomizePairs(final):
+    new_final = shuffle(final)
+    
+    return new_final
+    
 
 def selectImages(prefix, cate_1, cate_2, number):
     print("Sampling and generate ") 
