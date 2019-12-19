@@ -164,7 +164,7 @@ def downloadFromURL(file_array):
                     image_format = data["image"].replace("..","").split("/")
                     
                     image_file = requests.get(image_address)
-                    open("D:\Github\ResearchCodes\StreetScore\ImagePairingScripts\json\\"+file_array[i].replace(".json","")+"\\"+image_format[-1], 'wb').write(image_file.content)
+                    open("D:\Github\StreetScore\json\\"+file_array[i].replace(".json","")+"\\"+image_format[-1], 'wb').write(image_file.content)
 
 
                     # print(image_format[-1])
