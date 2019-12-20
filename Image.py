@@ -113,6 +113,8 @@ def getImageDirectLink(oldLink):
     #print(newLink)
   
     return newLink
+
+
 def downloadFromURL(file_array):
     # load json files
     # exportedSelection_east
@@ -160,6 +162,7 @@ def downloadFromURL(file_array):
                 for data in json_data:
                     image_address = image_prefix +data["image"].replace("..","")
                     print(image_address)
+                    # http://10.76.80.20:8080//data/100x100/buildings_thumbs_256/YerYP2dO.jpg
                     image_data[data["id"]] = image_address
                     image_format = data["image"].replace("..","").split("/")
                     
