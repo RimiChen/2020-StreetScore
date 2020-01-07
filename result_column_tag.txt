@@ -1,0 +1,198 @@
+count 0 :
+HITId
+count 1 :
+HITTypeId
+count 2 :
+Title
+count 3 :
+Description
+count 4 :
+Keywords
+count 5 :
+Reward
+count 6 :
+CreationTime
+count 7 :
+MaxAssignments
+count 8 :
+RequesterAnnotation
+count 9 :
+AssignmentDurationInSeconds
+count 10 :
+AutoApprovalDelayInSeconds
+count 11 :
+Expiration
+count 12 :
+NumberOfSimilarHITs
+count 13 :
+LifetimeInSeconds
+count 14 :
+AssignmentId
+count 15 :
+WorkerId
+count 16 :
+AssignmentStatus
+count 17 :
+AcceptTime
+count 18 :
+SubmitTime
+count 19 :
+AutoApprovalTime
+count 20 :
+ApprovalTime
+count 21 :
+RejectionTime
+count 22 :
+RequesterFeedback
+count 23 :
+WorkTimeInSeconds
+count 24 :
+LifetimeApprovalRate
+count 25 :
+Last30DaysApprovalRate
+count 26 :
+Last7DaysApprovalRate
+count 27 :
+Input.image_url_0_1
+count 28 :
+Input.image_url_0_2
+count 29 :
+Input.image_url_1_1
+count 30 :
+Input.image_url_1_2
+count 31 :
+Input.image_url_2_1
+count 32 :
+Input.image_url_2_2
+count 33 :
+Input.image_url_3_1
+count 34 :
+Input.image_url_3_2
+count 35 :
+Input.image_url_4_1
+count 36 :
+Input.image_url_4_2
+count 37 :
+Answer.photo_1_complete_0.on
+count 38 :
+Answer.photo_1_complete_1.on
+count 39 :
+Answer.photo_1_complete_2.on
+count 40 :
+Answer.photo_1_complete_3.on
+count 41 :
+Answer.photo_1_complete_4.on
+count 42 :
+Answer.photo_1_maintained_0.on
+count 43 :
+Answer.photo_1_maintained_1.on
+count 44 :
+Answer.photo_1_maintained_2.on
+count 45 :
+Answer.photo_1_maintained_3.on
+count 46 :
+Answer.photo_1_maintained_4.on
+count 47 :
+Answer.photo_1_newer_0.on
+count 48 :
+Answer.photo_1_newer_1.on
+count 49 :
+Answer.photo_1_newer_2.on
+count 50 :
+Answer.photo_1_newer_3.on
+count 51 :
+Answer.photo_1_newer_4.on
+count 52 :
+Answer.photo_1_occupied_0.on
+count 53 :
+Answer.photo_1_occupied_1.on
+count 54 :
+Answer.photo_1_occupied_2.on
+count 55 :
+Answer.photo_1_occupied_3.on
+count 56 :
+Answer.photo_1_occupied_4.on
+count 57 :
+Answer.photo_1_safer_0.on
+count 58 :
+Answer.photo_1_safer_1.on
+count 59 :
+Answer.photo_1_safer_2.on
+count 60 :
+Answer.photo_1_safer_3.on
+count 61 :
+Answer.photo_1_safer_4.on
+count 62 :
+Answer.photo_1_wealthier_0.on
+count 63 :
+Answer.photo_1_wealthier_1.on
+count 64 :
+Answer.photo_1_wealthier_2.on
+count 65 :
+Answer.photo_1_wealthier_3.on
+count 66 :
+Answer.photo_1_wealthier_4.on
+count 67 :
+Answer.photo_2_complete_0.on
+count 68 :
+Answer.photo_2_complete_1.on
+count 69 :
+Answer.photo_2_complete_2.on
+count 70 :
+Answer.photo_2_complete_3.on
+count 71 :
+Answer.photo_2_complete_4.on
+count 72 :
+Answer.photo_2_maintained_0.on
+count 73 :
+Answer.photo_2_maintained_1.on
+count 74 :
+Answer.photo_2_maintained_2.on
+count 75 :
+Answer.photo_2_maintained_3.on
+count 76 :
+Answer.photo_2_maintained_4.on
+count 77 :
+Answer.photo_2_newer_0.on
+count 78 :
+Answer.photo_2_newer_1.on
+count 79 :
+Answer.photo_2_newer_2.on
+count 80 :
+Answer.photo_2_newer_3.on
+count 81 :
+Answer.photo_2_newer_4.on
+count 82 :
+Answer.photo_2_occupied_0.on
+count 83 :
+Answer.photo_2_occupied_1.on
+count 84 :
+Answer.photo_2_occupied_2.on
+count 85 :
+Answer.photo_2_occupied_3.on
+count 86 :
+Answer.photo_2_occupied_4.on
+count 87 :
+Answer.photo_2_safer_0.on
+count 88 :
+Answer.photo_2_safer_1.on
+count 89 :
+Answer.photo_2_safer_2.on
+count 90 :
+Answer.photo_2_safer_3.on
+count 91 :
+Answer.photo_2_safer_4.on
+count 92 :
+Answer.photo_2_wealthier_0.on
+count 93 :
+Answer.photo_2_wealthier_1.on
+count 94 :
+Answer.photo_2_wealthier_2.on
+count 95 :
+Answer.photo_2_wealthier_3.on
+count 96 :
+Answer.photo_2_wealthier_4.on
+count 97 :
+Approve
+count 98 :
+Reject
